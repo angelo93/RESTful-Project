@@ -2,12 +2,25 @@ Final Project utilizing RESTful routing
 
 Will expand on later commits
 
-| Name   | Path	           | HTTP Verb | Purpose	                                        | Mongoose Method        |
-| ---    | ---             | ---       | ---                                                | ---                    |
-| Index	 | /dogs	       | GET	   | List all dogs	                                    | Dog.find()             |
-| New	 | /dogs/new	   | GET	   | Show new dog form	                                | N/A                    |
-| Create | /dogs	       | POST	   | Create a new dog, then redirect somewhere	        | Dog.create()           |
-| Show	 | /dogs/:id	   | GET	   | Show info about one specific dog	                | Dog.findById()         |
-| Edit	 | /dogs/:id/edit  | GET	   | Show edit form for one dog	                        | Dog.findById()         |
-| Update | /dogs/:id	   | PUT	   | Update particular dog, then redirect somewhere	    | Dog.findByIdAndUpdate()|
-| Destroy| /dogs/:id	   | DELETE	   | Delete a particular dog, then redirect somewhere	| Dog.findByIdAndRemove()|
+**Campground Routes**
+| Name   | Path	                 | HTTP Verb | Purpose	                                | Mongoose Method               |
+| ---    | ---                   | ---       | ---                                      | ---                           |
+| Index	 | /campgrounds	         | GET	     | List all campgrounds	                    | Camgpround.find()              |
+| New	 | /campgrounds/new	     | GET	     | Show new campground form	                | N/A                           |
+| Create | /campgrounds	         | POST	     | Create a new campground	                | Campground.create()           |
+| Show	 | /campgrounds/:id	     | GET	     | Show info about one specific campground	| Campground.findById()         |
+| Edit	 | /campgrounds/:id/edit | GET	     | Show edit form for one campground	    | Campground.findById()         |
+| Update | /campgrounds/:id	     | PUT	     | Update particular campground	            | Campground.findByIdAndUpdate()|
+| Destroy| /campgrounds/:id	     | DELETE	 | Delete a particular campground	        | Campground.findByIdAndRemove()|
+
+**Comment Routes**
+* All comment routes preceeded by </campgrounds/:id>.*
+| Name   | Path	                     | HTTP Verb | Purpose	                              | Mongoose Method               |
+| ---    | ---                       | ---       | ---                                    | ---                           |
+| Index	 | /comments	             | GET	     | List all comments	                  | Comment.find()                |
+| New	 | /comments/new	         | GET	     | Show new comment form	              | N/A                           |
+| Create | /comments	             | POST	     | Create a new comment	                  | Comment.create()              |
+| Show	 | /comments/comment_id	     | GET	     | Show info about one specific comment	  | Comment.findById()            |
+| Edit	 | /comments/comment_id/edit | GET	     | Show edit form for one comment	      | Comment.findById()            |
+| Update | /comments/comment_id	     | PUT	     | Update particular comment	          | Comment.findByIdAndUpdate()   |
+| Destroy| /comments/comment_id	     | DELETE	 | Delete a particular comment	          | Comment.findByIdAndRemove()   |
