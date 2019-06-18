@@ -1,8 +1,27 @@
-Final Project utilizing RESTful routing
+# **Project utilizing RESTful routing**
 
-Will expand on later commits
+##### Description:
+Fully functional and responsive full stack web app. Utilizes RESTful routing conventions. 
 
-# Campground Routes #
+Current features include:
+
+* User sign up, login and logout.
+* Campground creation, edit and deletion.
+* Comment creation, edit and deletion.
+* User authentication and permissions.
+
+More features are planned and will be implemented soon!
+
+##### Tech Stack
+* HTML: Web app layout.
+* CSS: Landing page animations and styling of certain elements.
+* Bootstrap: Navbar, and other styling elements.
+* JavaScript: Web app logic.
+* NodeJS: Web app hosting logic.
+* Express: Web app routing logic.
+* MongoDB: Database for web app.
+
+## Campground Routes #
 
 | Name   | Path	                 | HTTP Verb | Purpose	                                | Mongoose Method               |
 | ---    | ---                   | ---       | ---                                      | ---                           |
@@ -14,9 +33,9 @@ Will expand on later commits
 | Update | /campgrounds/:id	     | PUT	     | Update particular campground	            | Campground.findByIdAndUpdate()|
 | Destroy| /campgrounds/:id	     | DELETE	 | Delete a particular campground	        | Campground.findByIdAndRemove()|
 
-# Comment Routes #
+## Comment Routes #
 
-All comment routes preceeded by /campgrounds/:id
+All comment routes preceeded by `/campgrounds/:id`
 
 | Name   | Path	                     | HTTP Verb | Purpose	                              | Mongoose Method               |
 | ---    | ---                       | ---       | ---                                    | ---                           |
