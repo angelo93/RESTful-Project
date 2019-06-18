@@ -2,10 +2,11 @@ Final Project utilizing RESTful routing
 
 Will expand on later commits
 
-Campground Routes
+# Campground Routes #
+: ---------------
 | Name   | Path	                 | HTTP Verb | Purpose	                                | Mongoose Method               |
 | ---    | ---                   | ---       | ---                                      | ---                           |
-| Index	 | /campgrounds	         | GET	     | List all campgrounds	                    | Camgpround.find()              |
+| Index	 | /campgrounds	         | GET	     | List all campgrounds	                    | Camgpround.find()             |
 | New	 | /campgrounds/new	     | GET	     | Show new campground form	                | N/A                           |
 | Create | /campgrounds	         | POST	     | Create a new campground	                | Campground.create()           |
 | Show	 | /campgrounds/:id	     | GET	     | Show info about one specific campground	| Campground.findById()         |
@@ -13,8 +14,12 @@ Campground Routes
 | Update | /campgrounds/:id	     | PUT	     | Update particular campground	            | Campground.findByIdAndUpdate()|
 | Destroy| /campgrounds/:id	     | DELETE	 | Delete a particular campground	        | Campground.findByIdAndRemove()|
 
-Comment Routes
+:  - - - -
+
+# Comment Routes #
+: ---------------
 All comment routes preceeded by /campgrounds/:id
+
 | Name   | Path	                     | HTTP Verb | Purpose	                              | Mongoose Method               |
 | ---    | ---                       | ---       | ---                                    | ---                           |
 | Index	 | /comments	             | GET	     | List all comments	                  | Comment.find()                |
