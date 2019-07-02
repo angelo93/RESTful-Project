@@ -1,3 +1,5 @@
+const PORT = process.env.PORT || 3000;
+require("dotenv").config();
 // NPM IMPORTS
 var express = require("express"),
   app = express(),
@@ -20,23 +22,11 @@ var commentRoutes = require("./routes/comments"),
   indexRoutes = require("./routes/index");
 
 // CONNECT TO DATABASE
-mongoose
-  .connect(
-    "mongodb+srv://angelo93:12qwasZX@cluster0-yjp1d.mongodb.net/test?retryWrites=true&w=majority",
-    {
-      useNewUrlParser: true,
-      useCreateIndex: true
-    }
-  )
-  .then(function() {
-    console.log("Connected to DB!");
-  })
-  .catch(function(err) {
-    console.log("ERROR", err.message);
+mongoose.connect(process.env.DBURL, {
+    useNewUrlParser: true,
+    useCreateIndex: true
   });
-// mongoose.connect("mongodb://localhost/yelp_camp_final", {
-//   useNewUrlParser: true
-// });
+
 mongoose.set("useFindAndModify", false);
 
 // DEFAULTS
@@ -85,6 +75,6 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 // =====================================================================
 
 //  PORT NUMBER HOSTING THE SERVER //
-app.listen(process.env.PORT, process.env.IP, function() {
+app.listen(PORT, process.env.IP, function() {
   console.log("The YelpCamp server has been initialized");
 });
