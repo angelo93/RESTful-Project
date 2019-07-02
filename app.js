@@ -20,9 +20,23 @@ var commentRoutes = require("./routes/comments"),
   indexRoutes = require("./routes/index");
 
 // CONNECT TO DATABASE
-mongoose.connect("mongodb://localhost/yelp_camp_final", {
-  useNewUrlParser: true
-});
+mongoose
+  .connect(
+    "mongodb+srv://angelo93:12qwasZX@cluster0-yjp1d.mongodb.net/test?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true,
+      useCreateIndex: true
+    }
+  )
+  .then(function() {
+    console.log("Connected to DB!");
+  })
+  .catch(function(err) {
+    console.log("ERROR", err.message);
+  });
+// mongoose.connect("mongodb://localhost/yelp_camp_final", {
+//   useNewUrlParser: true
+// });
 mongoose.set("useFindAndModify", false);
 
 // DEFAULTS
