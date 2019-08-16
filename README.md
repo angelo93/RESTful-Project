@@ -1,6 +1,6 @@
 # **Project utilizing RESTful routing**
 
-###Live Preview: https://rest-project.herokuapp.com/
+### Live Preview: https://rest-project.herokuapp.com/
 
 #### Description:
 Fully functional and responsive full stack web app. Utilizes RESTful routing conventions. 
